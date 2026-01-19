@@ -1,13 +1,11 @@
 "use client"
-import Image from "next/image";
-import Navbar from "@/components/navbar";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter()
   return (
-    <main className="max-w-screen min-h-screen py-4 bg-gradient-to-b from-blue-700 to-blue-300 relative overflow-hidden">
-      <Navbar/>
+    <main className="max-w-screen pt-25 min-h-screen py-4 bg-gradient-to-b from-blue-700 to-blue-300 relative overflow-hidden">
+      
       
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none">

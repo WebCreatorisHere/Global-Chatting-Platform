@@ -42,3 +42,196 @@
 opacity: 1;
 
 }
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+#root {
+  display: flex;
+}
+
+.str-chat__channel-list {
+  width: 30%;
+}
+.str-chat__channel {
+  width: 100%;
+}
+.str-chat__thread {
+  width: 45%;
+}
+
+.majorimage{
+  width: 45px;
+  height: 45px;
+  border-radius: 99px;
+  /* background-size: 110%; */
+}
+.str-chat__theme-dark,
+.str-chat__theme-dark .str-chat__main-panel,
+.str-chat__theme-dark .str-chat__list,
+.str-chat__theme-dark .str-chat__message-list,
+.str-chat__theme-dark .str-chat__ul,
+.str-chat__theme-dark .str-chat__window,
+.str-chat__theme-dark .str-chat__thread {
+  background-color: #1A1A1E !important;
+}
+
+.activated{
+  background: #2d2d2d;
+  position: relative;
+}
+.activated::before{
+  content: "";
+  width: 3px;
+  height: 16px;
+  background-color: #1da960;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 99px;
+  transform: translateY(60%);
+}
+
+/* For modern browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;               /* thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;  /* blends into background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a2a2d; /* subtle dark grey */
+  border-radius: 10px;       /* rounded corners */
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3a3a3f; /* slightly lighter on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2d transparent;
+}
+.search{
+  border-radius: 99px; 
+}
+.filter{
+  border-color: #2d2e2e;
+  color: #a9aaaa;
+  cursor: pointer;
+}
+.filter:hover{
+  background-color: #2d2e2e;
+}
+.activatedfilter{
+background-color: #103529;
+border-color: #28493e;
+color: #d9fdd3;
+}
+.activatedfilter:hover{
+  background-color: #11432e;
+}
+
+.activatedtab{
+  border-bottom: 1px solid #f5f5f5;
+  color: #f5f5f5;
+}
+
+.acceptbutton{
+  background-color: #32cd32;
+  padding: 12px 12px;
+  border-radius: 8px;
+}
+.rejectbutton{
+  background-color: #ff4500;
+  padding: 12px 12px;
+  border-radius: 8px;
+}
+.acceptbutton:hover{
+  background-color: #28a428;
+}
+.rejectbutton:hover{
+  background-color: #e03e00;
+}
+
+.loader {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #ffffff;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hider{
+  left: -100%;
+  opacity: 0;
+}
+/* Whole chat background */
+
+.str-chat__main-panel {
+  position: relative;
+  background-image: url(https://camo.githubusercontent.com/c42c83df2fd1e442ef1e0ed69cc20d21f65308fc2f0dca2a8035360738d49c8c/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67) !important;
+  background-size: 60% !important;
+  background-color: #161717 !important;
+  /* z-index: 0; */
+}
+
+.str-chat__main-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 23, 23, 0.92); /* ⬅️ change opacity here */
+  pointer-events: none;
+  z-index: 10;
+}
+
+
+/* Message list area */
+
+.str-chat__main-panel-inner .str-chat__list {
+ background: transparent;
+ position: relative;
+ z-index: 10;
+}
+
+
+
+.str-chat__message--me
+.str-chat__message-bubble {
+  background-color: #144d37 !important;
+  color: white !important;
+}
+
+
+.str-chat__message--other
+.str-chat__message-bubble {
+  background-color: #242626 !important;
+  color: white !important;
+}
+.str-chat__message-input{
+  position: relative !important;
+  z-index:10 !important;
+  background: #242626 !important;
+}
+.str-chat__list-notifications{
+  position: relative !important;
+  z-index:10 !important;
+  background: #242626 !important;
+}
+.str-chat__message-textarea-container{
+  border:none !important;
+}

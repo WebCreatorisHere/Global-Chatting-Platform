@@ -1,5 +1,5 @@
 {
-  "name": "online-chatting",
+  "name": "Online-chatting-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,9 @@
     "@clerk/nextjs": "^6.32.2",
     "next": "15.5.3",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "stream-chat": "^9.20.0",
+    "stream-chat-react": "^13.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

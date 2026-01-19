@@ -1,0 +1,29 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="5 5 22 22"
+  width="64"
+  height="64"
+  id="SentPaperPlane"
+>
+  <g fill="#ffffff">
+    <path
+      fill="none"
+      stroke="#ffffff"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M16.69,24.77l-3-6.45-6.45-3a2.13,2.13,0,0,1,.23-4L23.19,6.11a2.14,2.14,0,0,1,2.7,2.7L20.64,24.54A2.13,2.13,0,0,1,16.69,24.77Z"
+    />
+    <line
+      x1="13.89"
+      y1="18.11"
+      x2="17.94"
+      y2="14.06"
+      fill="none"
+      stroke="#ffffff"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </g>
+</svg>

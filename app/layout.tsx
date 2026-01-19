@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "@/components/navbar";
 import "./globals.css";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  ClerkProvider
 } from '@clerk/nextjs'
+import "stream-chat-react/dist/css/v2/index.css";
+
 
 
 const geistSans = Geist({
@@ -34,8 +32,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          
+        <body className={`${geistSans.variable} ${geistMono.variable}  antialiased`}>
+          <Navbar/>
           {children}
         </body>
       </html>

@@ -1,30 +1,31 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { UserButton } from '@clerk/nextjs'
-import { useRouter } from 'next/navigation'
 import { useUser } from '@clerk/nextjs'
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 
-const navbar = () => {
+const Navbar = () => {
   const {user} = useUser()
+  const pathname = usePathname();
   useEffect(() => {
     console.log(user)
   }, [user])
-  
-    
+  if(pathname.startsWith('/forms/') || pathname.startsWith("/chat"))return
   return (
-    <nav className='flex relative z-[100] p-3 px-3 w-[90%] mx-auto justify-between items-center rounded-full  bg-white/30 shadow-md backdrop-blur-lg'>
+    <nav className='flex fixed z-[100] p-3 px-3 w-[90%] ml-[5%] translate-y-4 justify-between items-center rounded-full  bg-white/30 shadow-md backdrop-blur-lg'>
       <div className='w-14 flex items-center justify-center cursor-pointer relative'>
-        <img src="svgs/logo.svg" alt="Amazon" />
+        <img src="/svgs/logo.svg" alt="Amazon" />
         <h1 className='absolute font-bold text-2xl font-serif text-slate-900 left-17'>Amazon</h1>
       </div>
       <ul className='flex gap-6 items-center justify-center font-medium text-[#333333]'>
         <li className='navallies'><Link href={"/"}>Home</Link></li>
         <li className='navallies'><Link href={"/"}>About us</Link></li>
-        <li className='navallies'><Link href={"/"}>User Chat</Link></li>
-        <li className='navallies'><Link href={"/"}>Global Chats</Link></li>
+        <li className='navallies'><Link href={"/chat"}>User Chat</Link></li>
+        <li className='navallies'><Link href={"/forms"}>Global Chats</Link></li>
         <li className='navallies'><Link href={"/"}>Discover</Link></li>
       </ul>
 <div className="bigb flex gap-3 items-center justify-center">
@@ -52,4 +53,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
