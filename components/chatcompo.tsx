@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import type { User, Channel as StreamChannel } from "stream-chat";
-import Image from "next/image";
 import { joinAndCapitalize } from "@/app/action/utilityfunctions";
 import {
   useCreateChatClient,
